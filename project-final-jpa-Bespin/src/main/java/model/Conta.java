@@ -5,15 +5,37 @@ package model;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import enums.TipoConta;
 
-
+@Entity
+@Table(name = "tab_conta")
 public class Conta {
-	private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
+	@Column(nullable = false, length = 20)
+	private String numero;
+	
+	@Column(length = 200)
 	private String descricao;
+	
+	@Column(nullable = false, length = 20)
 	private String loginUsuario;
+	
+	@Column(nullable = false, length = 20, precision = 9, scale = 2)
 	private double saldo = 0;
+	
+	@Column(nullable = false, length = 10)
 	private TipoConta tipoConta;
+	
 	private List<Lancamento> lancamentos;	
 	
 	public Conta(int id, String descricao, String loginUsuario, double saldo, TipoConta tipoConta) {

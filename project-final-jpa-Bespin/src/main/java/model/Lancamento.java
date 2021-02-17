@@ -3,16 +3,39 @@
  */
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import enums.TipoConta;
 
-
+@Entity
+@Table(name = "tab_conta")
 public class Lancamento {
-	private int id;
-	private int idConta;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	
+	@Column(nullable = false)
+	private Integer idConta;
+	
+	@Column(nullable = false, length = 10)
 	private String data;
+	
+	@Column(length = 200)
 	private String descricao;
+	
+	@Column(nullable = false, length = 20)
 	private PlanoConta planoConta;
+	
+	@Column(nullable = false, length = 10)
 	private TipoConta tipoConta;
+	
+	@Column(nullable = false, length = 20, precision = 9, scale = 2)
 	private double valor;
 
 	public Lancamento(int id, int idConta, String data, String descricao, PlanoConta planoConta, TipoConta tipoConta,

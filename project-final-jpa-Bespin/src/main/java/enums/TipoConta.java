@@ -2,7 +2,7 @@ package enums;
 
 public enum TipoConta {
 	CB("Conta Banco"),
-	CC("Conta Cr�dito");
+	CC("Conta Credito");
 	
 	private String descricao;
 	

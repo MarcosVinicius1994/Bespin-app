@@ -14,11 +14,20 @@ public class ContaDto {
 	private List<Lancamento> lancamentos;
 	private double saldo;
 	
+	
+	
+	public ContaDto() {
+		super();
+	}
+
 	public ContaDto(Conta conta) {
 		this.id = conta.getId();
 		this.lancamentos = conta.getLancamentos();
 		this.saldo = conta.getSaldo();
 	}
+	
+	
+	
 
 	public long getId() {
 		return id;

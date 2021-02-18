@@ -1,20 +1,22 @@
-/**
- * 
- */
 package dto;
 
-/**
- * @author B�rbara Rodrigues, Gabriel Botelho, Guilherme Cruz, Lucas Caputo, Renan Alencar, Wesley Vicente
- *
- */
+
 public class LoginDto {
 	private String usuario;
 	private String senha;
 	
+	
+	
+	public LoginDto() {
+		super();
+	}
+
+
 	public LoginDto(String usuario, String senha) {
 		this.usuario = usuario;
 		this.senha = senha;
 	}
+	
 	
 	public String getUsuario() {
 		return usuario;

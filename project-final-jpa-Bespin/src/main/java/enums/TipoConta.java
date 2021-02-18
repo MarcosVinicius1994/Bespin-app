@@ -1,16 +1,16 @@
 package enums;
 
 public enum TipoConta {
-	CB("Conta Banco"),
-	CC("Conta Credito");
+	CoBa("Conta Banco"),
+	CoCr("Conta Credito");
 	
-	private String descricao;
+	private String desc;
 	
 	private TipoConta(String descricao) {
-		this.descricao = descricao;
+		this.desc = descricao;
 	}
 	
 	public String getDescricao() {
-		return descricao;
+		return desc;
 	}
 }

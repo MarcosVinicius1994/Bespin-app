@@ -9,6 +9,12 @@ public class UsuarioDto {
 	private String nome;
 	private String senha;
 	
+	
+	
+	public UsuarioDto() {
+		super();
+	}
+
 	public UsuarioDto(Usuario usuario) {
 		this.cpf = usuario.getCpf();
 		this.login = usuario.getLogin();
@@ -23,6 +29,9 @@ public class UsuarioDto {
 		this.nome = nome;
 		this.senha = senha;
 	}
+	
+	
+	
 	
 	public String getCpf() {
 		return cpf;
